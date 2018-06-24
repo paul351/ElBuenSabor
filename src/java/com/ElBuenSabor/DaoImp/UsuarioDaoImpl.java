@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  *
- * @author Diego
+ * @author 
  */
 public class UsuarioDaoImpl implements UsuarioDao {
     

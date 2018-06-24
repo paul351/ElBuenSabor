@@ -5,9 +5,11 @@
  */
 package com.ElBuenSabor.test;
 
+import com.ElBuenSabor.Dao.HistorialDao;
 import com.ElBuenSabor.Dao.PersonaDao;
 import com.ElBuenSabor.Dao.ProductoDao;
 import com.ElBuenSabor.Dao.UsuarioDao;
+import com.ElBuenSabor.DaoImp.HistorialDaoImpl;
 import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
@@ -24,12 +26,15 @@ public class test {
     private static PersonaDao pe=new PersonaDaoImpl();
     private static ProductoDao pr=new ProductoDaoImpl();
     private static UsuarioDao us=new UsuarioDaoImpl();
+    private static HistorialDao h=new HistorialDaoImpl();
     public static void main(String[] args) {
+        
         //conex();
         //listpe();
         //listpr();
         //crearpro();
-        CrearUsuario();
+        //CrearUsuario();
+        listarHisotrial();
     }
       
     
@@ -78,6 +83,10 @@ public class test {
         
         
         
+    }
+
+    private static void listarHisotrial() {
+        System.out.println(h.readAll());
     }
     
 }
