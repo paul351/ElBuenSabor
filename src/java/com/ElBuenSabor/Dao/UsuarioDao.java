@@ -16,5 +16,6 @@ import java.util.List;
  */
 public interface UsuarioDao {
     List<Usuario> readAll();
-    int crearUsuario(Usuario u, Persona p);    
+    int crearUsuario(Usuario u, Persona p);  
+    public Usuario LOGIN(String NICKNAME, String PASSWORD);
 }

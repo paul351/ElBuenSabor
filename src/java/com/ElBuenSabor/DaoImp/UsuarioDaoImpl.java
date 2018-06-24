@@ -11,6 +11,7 @@ import com.ElBuenSabor.Entity.Usuario;
 import com.ElBuenSabor.Util.Conexion;
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
     
     private CallableStatement cst;
     private ResultSet rs;
+    private PreparedStatement ps;
     private Connection cx;
     
     @Override
@@ -72,8 +74,26 @@ public class UsuarioDaoImpl implements UsuarioDao {
         }
         return x;    
     }
-    
-    
-        
-    
+
+    @Override
+    public Usuario LOGIN(String NICKNAME, String PASSWORD) {
+        Usuario US = new Usuario();
+        try {
+            cx = Conexion.getConexion();
+            ps = cx.prepareCall("SELECT * FROM USUARIO WHERE NICKNAME = ? AND PASSWORD = ?");
+            ps.setString(1, NICKNAME);
+            ps.setString(2, PASSWORD);
+            rs = ps.executeQuery();
+            while(rs.next()){
+               US.setId_usuario(rs.getInt(1));
+               US.setNickname(rs.getString(2));
+               US.setPassword(rs.getString(3));
+               US.setRol(rs.getInt(4));
+            }
+            return US;
+        } catch (SQLException e) {
+            System.out.println("Error:"+ e);
+            return null;
+        }
+    }
 }
