@@ -14,4 +14,13 @@ import java.util.Map;
 public interface PedidoDao {
     public List<Map<String,?>> listarChef();
     
+    
+    //copia diego   
+    
+    public List<Map<String,?>> listarPedido();
+    
+    
+    
+    
+    
 }

@@ -6,10 +6,12 @@
 package com.ElBuenSabor.test;
 
 import com.ElBuenSabor.Dao.HistorialDao;
+import com.ElBuenSabor.Dao.PedidoDao;
 import com.ElBuenSabor.Dao.PersonaDao;
 import com.ElBuenSabor.Dao.ProductoDao;
 import com.ElBuenSabor.Dao.UsuarioDao;
 import com.ElBuenSabor.DaoImp.HistorialDaoImpl;
+import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
@@ -28,9 +30,8 @@ public class test {
     private static ProductoDao pr=new ProductoDaoImpl();
     private static UsuarioDao us=new UsuarioDaoImpl();
     private static HistorialDao h=new HistorialDaoImpl();
-    private static UsuarioDao UDAO = new UsuarioDaoImpl();
-    private static Gson GSON = new Gson();
-    
+    private static PedidoDao pd=new PedidoDaoImpl(); 
+    private static Gson gs=new Gson();
     public static void main(String[] args) {
         
         //conex();
@@ -39,7 +40,8 @@ public class test {
         //crearpro();
         //CrearUsuario();
         //listarHisotrial();
-        crearusuario();
+        //listachef();
+        listaPe();
     }
       
     
@@ -94,8 +96,15 @@ public class test {
         System.out.println(h.readAll());
     }
 
-    private static void crearusuario() {
-        System.out.println(GSON.toJson(UDAO.COMBO()));
+    private static void listachef() {
+       
+        System.out.println(gs.toJson(pd.listarChef()));
+        
+    }
+    private static void listaPe() {
+       
+        System.out.println(gs.toJson(pd.listarPedido()));
+        
     }
     
 }

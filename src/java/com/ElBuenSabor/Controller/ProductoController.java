@@ -1,7 +1,9 @@
 
 package com.ElBuenSabor.Controller;
 
+import com.ElBuenSabor.Dao.PedidoDao;
 import com.ElBuenSabor.Dao.ProductoDao;
+import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.Entity.Producto;
 import com.google.gson.Gson;
@@ -20,6 +22,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ProductoController", urlPatterns = {"/pc"})
 public class ProductoController extends HttpServlet{
  private ProductoDao pr = new ProductoDaoImpl();
+ 
+ private PedidoDao pd=new PedidoDaoImpl();
     private Gson g = new Gson();
  
     /**
@@ -49,6 +53,8 @@ public class ProductoController extends HttpServlet{
                     break;
             case 5: pr.delete(Integer.parseInt(request.getParameter("id")));
                     break;  
+            case 6 :out.println(g.toJson(pd.listarPedido())); 
+                
         }
 }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
