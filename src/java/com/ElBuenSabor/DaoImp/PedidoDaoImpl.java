@@ -47,6 +47,33 @@ public class PedidoDaoImpl implements PedidoDao {
         }
         return ret;
      }
+
+    @Override
+    public List<Map<String, ?>> listarPedido() {
+
+        List<Map<String, ?>> ret = new ArrayList<>();
+        Map<String,Object> datos = null;
+        try {
+            cx = Conexion.getConexion();
+            cst = cx.prepareCall("{call LISTAVENTAS()}");
+            rs = cst.executeQuery();
+            while (rs.next()) {
+                
+                datos = new HashMap<>();
+                datos.put("NOMBRE", rs.getString(1));
+                datos.put("APELLIDO", rs.getString(2));
+                datos.put("DNI", rs.getInt(3));
+                datos.put("FECHA", rs.getString(4));
+                ret.add(datos);
+                
+            }
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
+        }
+        return ret;
+
+
+    }
     
   
     

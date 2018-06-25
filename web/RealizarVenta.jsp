@@ -25,32 +25,21 @@
 
 
     <div class="container ">
-        <table class="highlight">
+        <table class="highlight" id="tablita">
             <thead>
                 <tr>
-                    <th>Nombre</th>
-                    <th>Fecha</th>
-                    <th>Loco</th>
-                    <th>Loco</th>
-                    <th>Maincra</th>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>APELLIDO</th>
+                    <th>DNI</th>
+                    <th>FECHA</th>
+                    <th>MAS</th>
                 </tr>
             </thead>
 
             <tbody>
 
-                <tr>
-                    <td>Alvin</td>
-                    <td>asd</td>
-                    <th>Locos</th>
-                    <td>asd</td>
-                    <td><button data-target="modal1" class="btn-floating btn-large waves-effect waves-light red modal-trigger">
-                        
-                        
-                        <i class="material-icons">remove_red_eye</i>
-                        
-                    </button></td>
-
-                </tr>
+                
 
             </tbody>
         </table>
@@ -61,7 +50,7 @@
 
 
         <div class="container" >
-            <h3 style="margin-top: 30px;">Holu :,v</h3>
+            <h3 style="margin-top: 30px;">DetalleVenta</h3>
             <table class="highlight">
                 <thead>
                     <tr>
@@ -89,14 +78,6 @@
                     </tr>
                 </tbody>
             </table>
-
-
-
-
-
-
-
-
             <div class="modal-footer">
 
 
@@ -111,11 +92,11 @@
         
         
         <%@include file="WEB-INF/template/footer.jspf" %>
-         <script>
+        <script src="js/pedido.js" type="text/javascript"></script>
+        <script>
         $(document).ready(function() {
             $('.modal').modal();
         });
-
-    </script>
+        </script>
     </body>
 </html>

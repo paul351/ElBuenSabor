@@ -40,7 +40,8 @@ public class test {
         //crearpro();
         //CrearUsuario();
         //listarHisotrial();
-        listachef();
+        //listachef();
+        listaPe();
     }
       
     
@@ -98,6 +99,11 @@ public class test {
     private static void listachef() {
        
         System.out.println(gs.toJson(pd.listarChef()));
+        
+    }
+    private static void listaPe() {
+       
+        System.out.println(gs.toJson(pd.listarPedido()));
         
     }
     
