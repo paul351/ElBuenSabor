@@ -5,7 +5,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>ElBuenSabor - Cocinero</title>
-        
         <%@include file="WEB-INF/template/header.jspf" %>      
     </head>
     <body>
@@ -24,10 +23,6 @@
         </div>
         <%@include file="WEB-INF/template/footer.jspf" %>
         <script src="js/cocinero.js" type="text/javascript"></script>
-        <script>
-            $(document).ready(function () {
-                $('.tooltipped').tooltip();
-            });
-        </script>       
+              
     </body>
 </html>

@@ -5,6 +5,9 @@
  */
 package com.ElBuenSabor.Controller;
 
+import com.ElBuenSabor.Dao.PedidoDao;
+import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
+import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,30 +16,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  *
- * @author Diego
+ * @author Paul
  */
-@WebServlet(name = "HomeController", urlPatterns = {"/hc"})
-public class HomeController extends HttpServlet {
+@WebServlet(name = "CocineroController", urlPatterns = {"/cc"})
+public class CocineroController extends HttpServlet {
 
-    
+    private PedidoDao pd  = new PedidoDaoImpl();
+    private Gson g = new Gson();
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet HomeController</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet HomeController at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        PrintWriter out = response.getWriter();
+        int op = Integer.parseInt(request.getParameter("opc"));
+        switch(op){
+            case 1: out.println(g.toJson(pd.listarChef()));
+                    break;
         }
+    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -77,5 +78,7 @@ public class HomeController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    
 
 }

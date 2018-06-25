@@ -38,7 +38,7 @@ public class PedidoDaoImpl implements PedidoDao {
             while (rs.next()) {
                 datos = new HashMap<>();
                 datos.put("ID_PEDIDO", rs.getInt(1));
-                datos.put("DNI", rs.getString(2));
+                datos.put("DNI", rs.getInt(2));
                 
                 ret.add(datos);
             }
