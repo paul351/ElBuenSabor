@@ -6,10 +6,12 @@
 package com.ElBuenSabor.test;
 
 import com.ElBuenSabor.Dao.HistorialDao;
+import com.ElBuenSabor.Dao.PedidoDao;
 import com.ElBuenSabor.Dao.PersonaDao;
 import com.ElBuenSabor.Dao.ProductoDao;
 import com.ElBuenSabor.Dao.UsuarioDao;
 import com.ElBuenSabor.DaoImp.HistorialDaoImpl;
+import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
@@ -17,6 +19,7 @@ import com.ElBuenSabor.Entity.Persona;
 import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
 import com.ElBuenSabor.Util.Conexion;
+import com.google.gson.Gson;
 
 /**
  *
@@ -27,6 +30,8 @@ public class test {
     private static ProductoDao pr=new ProductoDaoImpl();
     private static UsuarioDao us=new UsuarioDaoImpl();
     private static HistorialDao h=new HistorialDaoImpl();
+    private static PedidoDao pd=new PedidoDaoImpl(); 
+    private static Gson gs=new Gson();
     public static void main(String[] args) {
         
         //conex();
@@ -34,7 +39,8 @@ public class test {
         //listpr();
         //crearpro();
         //CrearUsuario();
-        listarHisotrial();
+        //listarHisotrial();
+        listachef();
     }
       
     
@@ -87,6 +93,12 @@ public class test {
 
     private static void listarHisotrial() {
         System.out.println(h.readAll());
+    }
+
+    private static void listachef() {
+       
+        System.out.println(gs.toJson(pd.listarChef()));
+        
     }
     
 }

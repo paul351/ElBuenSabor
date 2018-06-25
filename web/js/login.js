@@ -12,7 +12,7 @@ $("#INGRESAR").click(function () {
         if (LOGIN.rol === 1) {
             location = 'ADMINISTRADOR.jsp';
         } else if (LOGIN.rol === 2) {
-            location = 'RECEPCIONISTA.jsp';
+            location = 'COCINERO.jsp';
         } else if (LOGIN.rol === 3) {
             location = 'MESERO.jsp';
         } else if (LOGIN.rol === 4) {
