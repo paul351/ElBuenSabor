@@ -18,4 +18,5 @@ public interface UsuarioDao {
     List<Usuario> readAll();
     int crearUsuario(Usuario u, Persona p);  
     public Usuario LOGIN(String NICKNAME, String PASSWORD);
+    public int CREAR(int DNI, String NOMBRES, String APELLIDOS);
 }

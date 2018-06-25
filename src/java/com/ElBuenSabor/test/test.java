@@ -17,6 +17,7 @@ import com.ElBuenSabor.Entity.Persona;
 import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
 import com.ElBuenSabor.Util.Conexion;
+import com.google.gson.Gson;
 
 /**
  *
@@ -27,6 +28,9 @@ public class test {
     private static ProductoDao pr=new ProductoDaoImpl();
     private static UsuarioDao us=new UsuarioDaoImpl();
     private static HistorialDao h=new HistorialDaoImpl();
+    private static UsuarioDao UDAO = new UsuarioDaoImpl();
+    private static Gson GSON = new Gson();
+    
     public static void main(String[] args) {
         
         //conex();
@@ -34,7 +38,8 @@ public class test {
         //listpr();
         //crearpro();
         //CrearUsuario();
-        listarHisotrial();
+        //listarHisotrial();
+        crearusuario();
     }
       
     
@@ -87,6 +92,10 @@ public class test {
 
     private static void listarHisotrial() {
         System.out.println(h.readAll());
+    }
+
+    private static void crearusuario() {
+        System.out.println(GSON.toJson(UDAO.CREAR(75552515, "JHORMAN RUSWEL", "TITO TITO")));
     }
     
 }

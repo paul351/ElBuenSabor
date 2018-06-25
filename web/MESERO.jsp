@@ -18,6 +18,7 @@
                 <a href="#" class="brand-logo center waves-effect">EL BUEN SABOR</a>
                 <ul id="nav-mobile" class="left hide-on-med-and-down">
                     <li><a id="crear_user" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-tooltip="Crear Usuario"><i class="material-icons">add_circle_outline</i></a></li>
+                    <li><a id="crear_pedi" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-tooltip="Crear Pedido"><i class="material-icons">shopping_cart</i></a></li>
                 </ul>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
                     <li><a href="index.jsp" class="waves-effect waves-light btn-large tooltipped" data-position="bottom" data-tooltip="Cerrar Sesión"><i class="material-icons">exit_to_app</i></a></li>
@@ -27,11 +28,7 @@
         <div id="contenedor">
         </div>
         <%@include file="WEB-INF/template/footer.jspf" %>
-        <script src="js/MESERO.js" type="text/javascript"></script>
-        <script>
-            $(document).ready(function () {
-                $('.tooltipped').tooltip();
-            });
-        </script>       
+        <script src="js/reniec-sunat-js.min.js" type="text/javascript"></script>
+        <script src="js/MESERO.js" type="text/javascript"></script>   
     </body>
 </html>

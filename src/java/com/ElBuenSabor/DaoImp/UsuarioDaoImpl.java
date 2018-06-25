@@ -96,4 +96,22 @@ public class UsuarioDaoImpl implements UsuarioDao {
             return null;
         }
     }
+
+    @Override
+    public int CREAR(int DNI, String NOMBRES, String APELLIDOS) {
+        Usuario US = new Usuario();
+        try {
+            cx = Conexion.getConexion();
+            cst = cx.prepareCall("{call CREARUSUARIO(?,?,?,?)}");
+            cst.setInt(1, DNI);
+            cst.setInt(2, 4);
+            cst.setString(3, NOMBRES);
+            cst.setString(4, APELLIDOS);
+            int x = cst.executeUpdate();
+            return x;
+        } catch (SQLException e) {
+            System.out.println("Error:"+ e);
+            return 0;
+        }
+    }
 }
