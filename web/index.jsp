@@ -1,8 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : 10/06/2018, 12:10:25 PM
-    Author     : Diego
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : producto
-    Created on : 17/06/2018, 09:52:09 PM
-    Author     : Diego
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

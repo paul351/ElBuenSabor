@@ -1,8 +1,4 @@
-<%-- 
-    Document   : ADMINISTRADOR
-    Created on : 21/06/2018, 07:00:26 PM
-    Author     : Diego
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

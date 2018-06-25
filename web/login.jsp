@@ -1,8 +1,3 @@
-<%-- 
-    Document   : logib
-    Created on : 24-jun-2018, 2:04:09
-    Author     : Jhorman Rus
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

@@ -4,9 +4,9 @@ $(document).ready(function () {
 
     $('.tooltipped').tooltip();
     
+   
     
    listarChef();
-        
 });
 
 $("#listar_pedido").click(function () {
@@ -46,6 +46,6 @@ function listarChef(){
 }
     function listarmodal(){
         
-        $("#tablamodal").modal('show');
+        $("#myModal").modal('show');
     
     }

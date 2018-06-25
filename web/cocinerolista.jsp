@@ -1,8 +1,4 @@
-<%-- 
-    Document   : cocinerolista
-    Created on : 25/06/2018, 12:38:15 AM
-    Author     : Paul
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -37,17 +33,6 @@
                 <div class="modal-body">
                     <div class="container">
             <table class="responsive-table" id="tabla">
-        <thead>
-          <tr>
-              <th>Posicion</th>
-              <th>Cliente DNI</th>
-              <th>Accion</th>
-          </tr>
-        </thead>
-        </table>
-        </div>
-        <div class="container">
-            <table class="responsive-table" id="tablamodal">
         <thead>
           <tr>
               <th>Posicion</th>
