@@ -95,7 +95,7 @@ public class test {
     }
 
     private static void crearusuario() {
-        System.out.println(GSON.toJson(UDAO.CREAR(75552515, "JHORMAN RUSWEL", "TITO TITO")));
+        System.out.println(GSON.toJson(UDAO.COMBO()));
     }
     
 }

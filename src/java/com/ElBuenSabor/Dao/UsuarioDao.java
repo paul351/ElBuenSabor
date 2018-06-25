@@ -6,9 +6,10 @@
 package com.ElBuenSabor.Dao;
 
 import com.ElBuenSabor.Entity.Persona;
+import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -19,4 +20,6 @@ public interface UsuarioDao {
     int crearUsuario(Usuario u, Persona p);  
     public Usuario LOGIN(String NICKNAME, String PASSWORD);
     public int CREAR(int DNI, String NOMBRES, String APELLIDOS);
+    public List<Map<String,?>> LISTAR();
+    List<Producto> COMBO();
 }

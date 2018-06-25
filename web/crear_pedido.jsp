@@ -7,5 +7,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <h3>PEDIDOX</h3>
+    <div class="row">
+        <div class="input-field col s1">
+            <a id="nuevo" class="btn waves-effect waves-light modal-trigger" href="#modal1">Crear Pedido
+                <i class="material-icons">add</i>
+            </a>
+        </div>
+        <div class="input-field col s1"></div>
+        <div id="table_contenido" class="input-field col s10">
+        </div>
+    </div>
 </html>
