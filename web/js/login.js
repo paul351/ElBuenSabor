@@ -17,7 +17,9 @@ $("#INGRESAR").click(function () {
             location = 'MESERO.jsp';
         } else if (LOGIN.rol === 4) {
             location = 'CLIENTE.jsp';
-        } else {
+        } else if(LOGIN.rol === 5){
+            location = 'CAJA.jsp';
+        } else{
             M.toast({html: 'Usuario Invalido'})
         }
     });
