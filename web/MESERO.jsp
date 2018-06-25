@@ -27,6 +27,31 @@
         </nav>
         <div id="contenedor">
         </div>
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>CREAR PEDIDO</h4>
+                <br>
+                <div id="cont_modal">
+                    <div class="input-field col s12">
+                        <input id="dni" type="text" class="validate">
+                        <label for="dni">DNI</label>
+                    </div>
+                    <div class="col s12">
+                        <label>ENTRADA</label> 
+                            <select id="combobox" class="combo idproductos" disabled>
+                            <option id="cargame" value="jejeje" selected></option>
+                        </select>
+                    </div>
+                    <div class="input-field col s12">
+                        <input id="dni" type="text" class="validate">
+                        <label for="dni">DNI</label>
+                    </div>
+                </div>
+                <a id="nuevo_crear" class="modal-close btn waves-effect waves-light">Crear Pedido
+                    <i class="material-icons"></i>
+                </a>
+            </div>
+        </div>
         <%@include file="WEB-INF/template/footer.jspf" %>
         <script src="js/reniec-sunat-js.min.js" type="text/javascript"></script>
         <script src="js/MESERO.js" type="text/javascript"></script>   

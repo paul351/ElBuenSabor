@@ -7,6 +7,7 @@ package com.ElBuenSabor.DaoImp;
 
 import com.ElBuenSabor.Dao.UsuarioDao;
 import com.ElBuenSabor.Entity.Persona;
+import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
 import com.ElBuenSabor.Util.Conexion;
 import java.sql.CallableStatement;
@@ -17,29 +18,30 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
- * @author 
+ * @author
  */
 public class UsuarioDaoImpl implements UsuarioDao {
-    
+
     private CallableStatement cst;
     private ResultSet rs;
     private PreparedStatement ps;
     private Connection cx;
-    
+
     @Override
     public List<Usuario> readAll() {
 
         List<Usuario> datos = new ArrayList<>();
-        
+
         try {
             cx = Conexion.getConexion();
             cst = cx.prepareCall("{call LISTARUSUARIO()}");
             rs = cst.executeQuery();
-            while(rs.next()){
-        
+            while (rs.next()) {
+
                 Usuario u = new Usuario();
                 u.setId_usuario(rs.getInt("ID_USUARIO"));
                 u.setNickname(rs.getString("NICKNAME"));
@@ -47,7 +49,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
                 datos.add(u);
             }
         } catch (SQLException e) {
-            System.out.println("Error: "+e);
+            System.out.println("Error: " + e);
         }
         return datos;
 
@@ -55,7 +57,7 @@ public class UsuarioDaoImpl implements UsuarioDao {
 
     @Override
     public int crearUsuario(Usuario u, Persona p) {
-    int x =0;
+        int x = 0;
         try {
             cx = Conexion.getConexion();
             cst = cx.prepareCall("{call CREARUSUARIO(?,?,?,?,?,?,?,?,?)}");
@@ -63,16 +65,16 @@ public class UsuarioDaoImpl implements UsuarioDao {
             cst.setString(2, u.getPassword());
             cst.setInt(3, u.getRol());
             cst.setString(4, p.getNombre());
-            cst.setString(5,p.getApellido());
+            cst.setString(5, p.getApellido());
             cst.setString(6, p.getDireccion());
             cst.setInt(7, p.getTelefono());
             cst.setInt(8, p.getDni());
             cst.setString(9, p.getCorreo());
             x = cst.executeUpdate();
-        }catch(SQLException e) {
-            System.out.println("Error:"+e);
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
         }
-        return x;    
+        return x;
     }
 
     @Override
@@ -84,15 +86,15 @@ public class UsuarioDaoImpl implements UsuarioDao {
             ps.setString(1, NICKNAME);
             ps.setString(2, PASSWORD);
             rs = ps.executeQuery();
-            while(rs.next()){
-               US.setId_usuario(rs.getInt(1));
-               US.setNickname(rs.getString(2));
-               US.setPassword(rs.getString(3));
-               US.setRol(rs.getInt(4));
+            while (rs.next()) {
+                US.setId_usuario(rs.getInt(1));
+                US.setNickname(rs.getString(2));
+                US.setPassword(rs.getString(3));
+                US.setRol(rs.getInt(4));
             }
             return US;
         } catch (SQLException e) {
-            System.out.println("Error:"+ e);
+            System.out.println("Error:" + e);
             return null;
         }
     }
@@ -110,8 +112,55 @@ public class UsuarioDaoImpl implements UsuarioDao {
             int x = cst.executeUpdate();
             return x;
         } catch (SQLException e) {
-            System.out.println("Error:"+ e);
+            System.out.println("Error:" + e);
             return 0;
         }
+    }
+
+    @Override
+    public List<Map<String, ?>> LISTAR() {
+        List<Map<String, ?>> ret = new ArrayList<>();
+        Map<String, Object> datos = null;
+        try {
+            cx = Conexion.getConexion();
+            ps = cx.prepareStatement("SELECT P.ID_PEDIDO, P.ESTADO, PE.DNI, PE.NOMBRE, PE.APELLIDO FROM PEDIDO P, USUARIO U, PERSONA PE WHERE U.ID_USUARIO = P.USUARIO_ID_USUARIO AND U.ID_USUARIO = PE.USUARIO_ID_USUARIO AND ESTADO = 1");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                datos = new HashMap<>();
+                datos.put("ID_PEDIDO", rs.getInt(1));
+                datos.put("ESTADO", rs.getString(2));
+                datos.put("DNI", rs.getString(3));
+                datos.put("NOMBRE", rs.getString(4));
+                datos.put("APELLIDO", rs.getString(5));
+                ret.add(datos);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
+        }
+        return ret;
+    }
+
+    @Override
+    public List<Producto> COMBO() {
+
+        List<Producto> datos = new ArrayList<>();
+        Producto PO = new Producto();
+
+        try {
+            cx = Conexion.getConexion();
+            ps = cx.prepareCall("SELECT * FROM PRODUCTO");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+
+                Usuario u = new Usuario();
+                PO.setId_producto(rs.getInt(1));
+                PO.setNombre(rs.getString(2));
+                PO.setPrecio(rs.getDouble(3));
+                datos.add(PO);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error: " + e);
+        }
+        return datos;
     }
 }
