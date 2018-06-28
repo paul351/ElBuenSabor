@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$(document). ready(function (){
     listarProducto();
     
 });
@@ -11,7 +11,7 @@ function listarProducto(){
             $("#tablita").append("<tr><td>" +x[i].ID_PEDIDO+ "</td><td>" +x[i].NOMBRE+"</td><td>"+x[i].APELLIDO+"</td><td>"+x[i].DNI+"</td><td>"+x[i].FECHA+"</td><td><button data-target='modal1' class='btn-floating btn-large waves-effect waves-light red modal-trigger' onclick='LISDE(" + x[i].ID_PEDIDO + ")'><i class='material-icons'>remove_red_eye</i></button></td></tr>");
         }
     });
-
+    
 }
 
 
@@ -47,26 +47,31 @@ function LISDE(x){
 
 $( "#aceptarpedido" ).click(function() {
  
-  var toastHTML = '<span>Confirmar</span><a onclick="maincra()" class="btn-flat toast-action">Estoy de acuerdo</a>';
+  var toastHTML = '<span>Confirmar</span><a id="aceptar" class="btn-flat toast-action">Estoy de acuerdo</a>';
         M.toast({html: toastHTML});
         
         
-        
-        
-        
-  
-         
+           
 });
 
-    
+   $( "#aceptar" ).click(function() {
+ 
+  var toastHTML = '<span>Confirmar</span><a id="aceptar" class="btn-flat toast-action">Estoy de acuerdo</a>';
+        M.toast({html: toastHTML});
+        
+        
+           
+});
+ 
 
-function maincra(){
-  
+function AceptarTotal(){ 
     
-  $.get("pc",{"precio":total,"id":id,"op":8},function() {
-    alert("este es el controler");
-    });    
     alert("locoo");
+    
+       $.post("pc",{"precio":12,"id":1,"op":8},function(data) {
+        alert(data);
+        alert("este es el controler");
+        });   
   var toastHTML = '<i class="material-icons">assignment_turned_in</i><span>Venta Exitosa</span>';
         M.toast({html: toastHTML});
 

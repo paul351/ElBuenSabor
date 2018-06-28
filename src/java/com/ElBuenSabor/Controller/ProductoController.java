@@ -62,6 +62,7 @@ public class ProductoController extends HttpServlet{
                     break;        
             case 8: Historial ht=new Historial(Double.parseDouble(request.getParameter("precio")),Integer.parseInt(request.getParameter("id")));
                     hd.create(ht);
+                    
                     break;        
                     
                     

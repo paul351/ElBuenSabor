@@ -16,6 +16,7 @@ import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
 import com.ElBuenSabor.Entity.Historial;
+import com.ElBuenSabor.Entity.Pedido;
 import com.ElBuenSabor.Entity.Persona;
 import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
@@ -32,6 +33,8 @@ public class test {
     private static UsuarioDao us=new UsuarioDaoImpl();
     private static HistorialDao h=new HistorialDaoImpl();
     private static PedidoDao pd=new PedidoDaoImpl(); 
+    
+    
     private static Gson gs=new Gson();
     public static void main(String[] args) {
         
@@ -44,6 +47,7 @@ public class test {
         //listachef();
         //listaPe();
         //listal();
+        ki();
     }
       
     
@@ -129,5 +133,11 @@ public class test {
     private static void friocomosucorazon() {
         System.out.println(gs.toJson(us.COMBO()));
     }
+    
+    private static void ki(){
+        Pedido pe=new Pedido(1);
+        System.out.println(pd.create(pe));
+    
+}
 
 }
