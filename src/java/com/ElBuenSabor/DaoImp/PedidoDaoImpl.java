@@ -126,7 +126,7 @@ public class PedidoDaoImpl implements PedidoDao {
         return P; 
     }
 
-<<<<<<< HEAD
+
     @Override
     public int create(Pedido p) {
             int id=0;
@@ -143,6 +143,28 @@ public class PedidoDaoImpl implements PedidoDao {
         return id;
     }
 
+    @Override
+    public List<Pedido> listarhistorial() {
+        
+        List<Pedido> datos = new ArrayList<>();
+        try {
+            cx = Conexion.getConexion();
+            cst = cx.prepareCall("{call listarRol()}");
+            rs = cst.executeQuery();
+            while(rs.next()){
+                Pedido p = new Pedido();
+                p.setId_pedido(rs.getInt("ID_PEDIDO"));
+                p.setFecha(rs.getString("FECHA"));
+                p.setEstado(rs.getInt("ESTADO"));
+                datos.add(p);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error: "+e);
+        }
+        return datos;
+        
+    }
+
 
 
 
@@ -155,9 +177,9 @@ public class PedidoDaoImpl implements PedidoDao {
     
     
 
-=======
+
   
    
 
-}
->>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9
+
+

@@ -43,58 +43,13 @@ function LISDE(x){
 }
 
 
-<<<<<<< HEAD
+
  function maincra(){
-      alert(id);
+    alert(id);
    
-        alert("sadfghj");
+    alert("sadfghj");
     $.get("cc", {"id":id,"opc":4}, function () {
-        listarChef();
-    });
-=======
-
-
-
-
-$( "#aceptarpedido" ).click(function() {
- 
-  var toastHTML = '<span>Confirmar</span><a id="aceptar" class="btn-flat toast-action">Estoy de acuerdo</a>';
-        M.toast({html: toastHTML});
-        
-        
-           
-});
-
-   $( "#aceptar" ).click(function() {
- 
-  var toastHTML = '<span>Confirmar</span><a id="aceptar" class="btn-flat toast-action">Estoy de acuerdo</a>';
-        M.toast({html: toastHTML});
-        
-        
-           
-});
- 
-
-function AceptarTotal(){ 
-    
-    alert("locoo");
-    
-       $.post("pc",{"precio":12,"id":1,"op":8},function(data) {
-        alert(data);
-        alert("este es el controler");
-        });   
-  var toastHTML = '<i class="material-icons">assignment_turned_in</i><span>Venta Exitosa</span>';
-        M.toast({html: toastHTML});
-
+        listarProducto()
+    });M.toast({html: 'REgistro correcto'});
+     total=0;
 }
->>>>>>> bac3c46cc021755eea7a54095f23506c1f455195
-
-
-
-
-
-     
-
- 
-
-         }

@@ -14,6 +14,7 @@ public class Pedido {
     private String fecha;
     private int usuario_id_usuario;
     private int estado;
+   
 
     public Pedido(String fecha, int usuario_id_usuario, int estado) {
         this.fecha = fecha;
@@ -41,11 +42,8 @@ public class Pedido {
     public Pedido() {
     }
 
-    public Pedido(int id_pedido) {
-        this.id_pedido = id_pedido;
-    }
-
-    
+   
+   
    
 
     public int getId_pedido() {

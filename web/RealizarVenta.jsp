@@ -15,15 +15,7 @@
     <body>
         <div class="container">
         <h3>Registrar Venta</h3>
-        <div class="row">
-        <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate">
-            <label for="last_name">Ingrese DNI</label>
         </div>
-        </div>
-    </div>
-
-
     <div class="container ">
         <table class="highlight" id="tablita">
             <thead>
