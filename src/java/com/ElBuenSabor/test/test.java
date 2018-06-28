@@ -44,8 +44,6 @@ public class test {
         //listachef();
         //listaPe();
         //listal();
-        ma();
-        
     }
       
     
@@ -126,6 +124,10 @@ public class test {
                   }else{
                     System.out.println("nlee");
                 }
+    }
+
+    private static void friocomosucorazon() {
+        System.out.println(gs.toJson(us.COMBO()));
     }
 
 }
