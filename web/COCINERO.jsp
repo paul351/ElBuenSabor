@@ -21,7 +21,29 @@
         </nav>
         <div id="contenedor">
         </div>
-        <%@include file="WEB-INF/template/footer.jspf" %>
-        <script src="js/cocinero.js" type="text/javascript"></script>              
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Lista de pedidos a preparar</h4>
+                <br>
+                <div id="cont_modal">
+                    <div class="container">
+                        <table class="responsive-table" id="tabla">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <input type="hidden" id="idpedido" class="validate">
+                </div>
+                <a id="nuevo_crear" class="modal-close btn waves-effect waves-light">Terminar Pedido
+                    <i class="material-icons"></i>
+                </a>
+            </div>
+        </div>              
     </body>
+    <%@include file="WEB-INF/template/footer.jspf" %>
+    <script src="js/cocinero.js" type="text/javascript"></script>
 </html>

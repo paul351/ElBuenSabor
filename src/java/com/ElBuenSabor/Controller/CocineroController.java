@@ -32,6 +32,8 @@ public class CocineroController extends HttpServlet {
         switch(op){
             case 1: out.println(g.toJson(pd.listarChef()));
                     break;
+            case 2: 
+                break;
         }
     
     }
