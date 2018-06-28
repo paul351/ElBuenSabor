@@ -28,14 +28,14 @@ public class DetallePedidoDaoImpl implements Detalle_PedidoDao{
         Map<String,Object> datos = null;
         try{
             cx = Conexion.getConexion();
-            cst = cx.prepareCall("{call LISTAMODALCHEF (?)}");
+            cst = cx.prepareCall("{call LISTAMODALCHEF(?)}");
             cst.setInt(1, id);
             rs = cst.executeQuery();
             while (rs.next()) {
                 
                 datos = new HashMap<>();
                 
-                datos.put("NOMBRE", rs.getString(1));
+                datos.put("NOMBRE", rs.getInt(1));
                 
                 datos.put("CANTIDAD", rs.getInt(2));
                 ret.add(datos);

@@ -27,7 +27,7 @@
                 <br>
                 <div id="cont_modal">
                     <div class="container">
-                        <table class="responsive-table" id="tabla">
+                        <table class="table" id="tablamodal">
                             <thead>
                                 <tr>
                                     <th>Producto</th>

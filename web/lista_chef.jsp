@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="container"> 
-            <table class="responsive-table" id="tabla">
+            <table class="table" id="tabla">
                 <thead>
                     <tr>
                         <th>#</th>

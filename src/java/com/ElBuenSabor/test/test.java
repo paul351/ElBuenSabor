@@ -43,7 +43,8 @@ public class test {
         //listachef();
         //listaPe();
         //listal();
-        friocomosucorazon();
+        //friocomosucorazon();
+        listaid();
     }
       
     
@@ -115,6 +116,10 @@ public class test {
 
     private static void friocomosucorazon() {
         System.out.println(gs.toJson(us.COMBO()));
+    }
+
+    private static void listaid() {
+        System.out.println(gs.toJson(pd.listarIdPedido(1)));
     }
 
 }
