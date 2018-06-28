@@ -26,21 +26,21 @@
         <div id="modal1" class="modal">
             <div class="modal-content">
                 <h4>CREAR PEDIDO</h4>
-                <br>
                 <div id="cont_modal">
                     <div class="input-field col s12">
-                        <input id="dni" type="text" class="validate">
-                        <label for="dni">DNI</label>
-                    </div>
-                    <div class="col s12">
-                        <label>ENTRADA</label> 
-                            <select id="combobox" class="combo idproductos" disabled>
-                            <option id="cargame" value="jejeje" selected></option>
-                        </select>
+                        <input id="dni_c" type="text" class="validate">
+                        <label for="dni_c">DNI</label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="dni" type="text" class="validate">
-                        <label for="dni">DNI</label>
+                        <table id="data-table-row-grouping" class="display" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>PRODUCTO</th>
+                                    <th>CANTIDAD</th>
+                                </tr>
+                            </thead>
+                            <tbody id="data_xd"></tbody>
+                        </table>
                     </div>
                 </div>
                 <a id="nuevo_crear" class="modal-close btn waves-effect waves-light">Crear Pedido

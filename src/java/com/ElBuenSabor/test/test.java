@@ -42,7 +42,8 @@ public class test {
         //listarHisotrial();
         //listachef();
         //listaPe();
-        listal();
+        //listal();
+        friocomosucorazon();
     }
       
     
@@ -110,6 +111,10 @@ public class test {
     
     private static void listal(){
         System.out.println(gs.toJson(pd.listarDetalle(1)));
+    }
+
+    private static void friocomosucorazon() {
+        System.out.println(gs.toJson(us.COMBO()));
     }
 
 }
