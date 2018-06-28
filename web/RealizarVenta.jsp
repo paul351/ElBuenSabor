@@ -51,31 +51,17 @@
 
         <div class="container" >
             <h3 style="margin-top: 30px;">DetalleVenta</h3>
-            <table class="highlight">
+            <table class="highlight" id="reyna">
                 <thead>
                     <tr>
                         <th>Nombre</th>
-                        <th>Precio</th>
                         <th>Cantidad</th>
+                        <th>Precio</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                    <tr>
-                        <td>Alvin</td>
-                        <td>Eclair</td>
-                        <td>$0.87</td>
-                    </tr>
-                    <tr>
-                        <td>Alan</td>
-                        <td>Jellybean</td>
-                        <td>$3.76</td>
-                    </tr>
-                    <tr>
-                        <td>Jonathan</td>
-                        <td>Lollipop</td>
-                        <td>$7.00</td>
-                    </tr>
+                    
                 </tbody>
             </table>
             <div class="modal-footer">

@@ -17,10 +17,10 @@ $("#INGRESAR").click(function () {
             location = 'MESERO.jsp';
         } else if (LOGIN.rol === 4) {
             location = 'CLIENTE.jsp';
-        } else if(LOGIN.rol === 5){
+        } else if(LOGIN.rol ===5){
             location = 'CAJA.jsp';
         } else{
-            M.toast({html: 'Usuario Invalido'})
+            M.toast({html: 'Usuario Invalido'});
         }
     });
 });

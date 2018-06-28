@@ -18,7 +18,7 @@ public interface PedidoDao {
     //copia diego   
     
     public List<Map<String,?>> listarPedido();
-    
+    public List<Map<String,?>> listarDetalle(int id);
     
     
     

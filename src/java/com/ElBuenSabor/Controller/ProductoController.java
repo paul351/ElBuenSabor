@@ -54,6 +54,10 @@ public class ProductoController extends HttpServlet{
             case 5: pr.delete(Integer.parseInt(request.getParameter("id")));
                     break;  
             case 6 :out.println(g.toJson(pd.listarPedido())); 
+                    break;
+            case 7 :out.println(g.toJson(pd.listarDetalle(Integer.parseInt(request.getParameter("id"))))); 
+                    break;        
+                    
                 
         }
 }

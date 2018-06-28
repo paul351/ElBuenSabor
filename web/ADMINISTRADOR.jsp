@@ -1,109 +1,108 @@
+<%-- 
+    Document   : CAJA
+    Created on : 25/06/2018, 01:08:08 AM
+    Author     : Diego
+--%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Administrador</title>
-        <%@include file="WEB-INF/template/header.jspf" %>      
+        <title>JSP Page</title>
+         <%@include file="WEB-INF/template/header.jspf" %>    
     </head>
-    <body class="has-fixed-sidenav">
+      <body class="has-fixed-sidenav">
         
       <div class="navbar-fixed">
+          
           <nav class="navbar cyan darken-1">
           <div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4"></a>
             <ul id="nav-mobile" class="right">
-              <li class="hide-on-med-and-down"><a href="#!" data-target="dropdown1" class="dropdown-trigger waves-effect"><i class="material-icons">notifications</i></a></li>
+               
+                  
+                  <li>
+                      
+                      
+                      <input value="" type="text" id="nombre">
+                  </li>
+                  
+       
               <li><a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><i class="material-icons">settings</i></a></li>
             </ul><a href="#!" data-target="sidenav-left" class="sidenav-trigger left"><i class="material-icons black-text">menu</i></a>
             <ul id="nav-mobile" class="left">
                 
-                <div class="container">
-                <li><a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><h4>
-                 ELBUENSABOR
-                 </h4></a></li>
-                 </div>
+             
+                <li><a href="#!" data-target="chat-dropdown" class="dropdown-trigger waves-effect"><i class="material-icons left">account_circle</i>ADMINISTRADOR</a></li>
+               
             </ul>    
           </div>
           </nav>
       </div>
                  
-        <ul id="sidenav-left" class="sidenav sidenav-fixed " style="width:250px;margin-top: 64px;">
+        <ul id="sidenav-left" class="sidenav sidenav-fixed " style="width:50px;margin-top: 64px;">
          
         
          
-            <ul class="collapsible collapsible-accordion" style="margin-top:50px;">
+          <ul class="collapsible collapsible-accordion " >
               
-                 <li class="bold waves-effect waves-light waves-button-input" style="width: 100%;"><a class="collapsible-header">Mantenimiento<i class="material-icons left">party_mode</i><i class="material-icons right">chevron_right</i></a>
-              <div class="collapsible-body">
-                  <ul>
-                  <li><a href="/pages/admin-dashboard" class="waves-effect ">Roles<i class="material-icons">web</i></a></li>
-                  <li><a href="/pages/admin-fixed-chart" class="waves-effect">Productos<i class="material-icons">list</i></a></li>
-                  <li><a href="/pages/admin-grid" class="waves-effect">Opciones<i class="material-icons">dashboard</i></a></li>
-                  <li><a href="/pages/admin-chat" class="waves-effect">Diseños<i class="material-icons">chat</i></a></li>
-                </ul>
-              </div>
-               </li>
-               
-                <li class="bold waves-effect waves-light" style="width: 100%;"><a class="collapsible-header">Seguridad<i class="material-icons left">visibility_off</i><i class="material-icons right">chevron_right</i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="" class="waves-effect ">Cambiar Usuario y Password<i class="material-icons">list</i></a></li>
-                  <li><a href="" class="waves-effect">Agregar Nuevo Usuario<i class="material-icons">dashboard</i></a></li>             
-                </ul>
-              </div>
-               </li>
-               
-                <li class="bold waves-effect waves-light" style="width: 100%;"><a class="collapsible-header">Reportes<i class="material-icons left">assessment</i><i class="material-icons right">chevron_right</i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="" class="waves-effect ">lorem<i class="material-icons">web</i></a></li>
-                  <li><a href="" class="waves-effect">lorem<i class="material-icons">list</i></a></li>
-                  <li><a href="" class="waves-effect">lorem<i class="material-icons">dashboard</i></a></li>
-                  <li><a href="" class="waves-effect">lorem<i class="material-icons">chat</i></a></li>
-                </ul>
-              </div>
-               </li>
-               
-                
-               
-                <li class="bold waves-effect waves-light" style="width: 100%;"><a class="collapsible-header">Pedidos<i class="material-icons left">add_shopping_cart</i><i class="material-icons right">chevron_right</i></a>
-              <div class="collapsible-body">
-                <ul>
-                  <li><a href="" class="waves-effect ">lorem<i class="material-icons">web</i></a></li>
-                  <li><a href="" class="waves-effect">lorem<i class="material-icons">list</i></a></li>
-                  
-                </ul>
-              </div>
-               </li>
+                  <li class="bold waves-effect waves-light waves-button-input" style="width: 100%;"><a class="collapsible-header tooltipped" onclick="url( 'producto.jsp' );"
+                                                                                                       data-position="right" data-tooltip="Gestion Producto"><i class="material-icons left">add_box</i></a>
+             
+                  </li>
+                      
+           
+                  <li class="bold waves-effect waves-light waves-button-input" style="width: 100%;"><a class="collapsible-header tooltipped" onclick="url( 'RealizarVenta.jsp' );"
+                                                                                                       data-position="right" data-tooltip="Gestion Persona"><i class="material-icons left">accessibility</i></a>
+
+                  </li>
+                  <li class="bold waves-effect waves-light waves-button-input" style="width: 100%;"><a class="collapsible-header tooltipped" onclick="url( 'RealizarVenta.jsp' );"
+                                                                                                       data-position="right" data-tooltip="Function Ventas"><i class="material-icons left">assistant</i></a>
+
+                  </li>
+                  <li class="bold waves-effect waves-light waves-button-input" style="width: 100%;"><a class="collapsible-header tooltipped" onclick="url( 'RealizarVenta.jsp' );"
+                                                                                                       data-position="right" data-tooltip="Realizar Venta"><i class="material-icons left">book</i></a>
+
+                  </li>
+                  <li class="bold waves-effect waves-light waves-button-input" style="width: 100%;"><a class="collapsible-header tooltipped" onclick="url( 'RealizarVenta.jsp' );"
+                                                                                                       data-position="right" data-tooltip="Realizar Venta"><i class="material-icons left">card_travel</i></a>
+
+                  </li>
+        
                
                
-               <li class="bold waves-effect " style="width: 100%;"><a class="collapsible-header">Cerrar Cesion<i class="material-icons chevron">chevron_left</i></a>
+             <li class="bold waves-effect " style="width: 100%;"><a class="collapsible-header tooltipped" data-position="bottom" data-tooltip="Cerrar Sesión"><i class="material-icons chevron">chevron_left</i></a>
               <div class="collapsible-body">
                 
               </div>
-               </li>
+             </li>
           </ul>   
       </ul>  
         
         
         
        
-      <div class="container" style="margin-left:250px;border:2px #000 solid;" >
-         <h1>Maincra</h1>      
-      </div>
-        
-        
-        
+      
+       
+
+          <iframe src="" height="1000px;" width="100%" id="a" style="border:none; "></iframe>
+
+         
+      
         
         <%@include file="WEB-INF/template/footer.jspf" %>
-        
         <script>
-            $(document).ready(function(){
-            $('.collapsible').collapsible();
+             $(document).ready(function () {
+                $('.tooltipped').tooltip();
+                $(".button-collapse").sideNav();
             });
+            function url( cUrl )
+{
+	var a = document.getElementById( 'a' );
+	a.src = cUrl;
+}
             
             
-        </script>       
+        </script>
     </body>
 </html>
