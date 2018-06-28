@@ -48,9 +48,7 @@
                             <div class="row">
                                 <a id="INGRESAR" class="waves-effect waves-light btn-large" style="width: 100%;">Login</a>
                             </div><br>
-                            <div class="row">
-                                <a class="waves-effect  deep-orange btn-large" style="width: 100%;">Register</a>
-                            </div>
+                           
                         </div>
                     </div>
                     <div class="col s5">

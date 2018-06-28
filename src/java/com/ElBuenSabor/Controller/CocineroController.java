@@ -40,6 +40,11 @@ public class CocineroController extends HttpServlet {
             case 3: 
                     out.println(g.toJson(dpd.estadoEdit(Integer.parseInt(request.getParameter("id")))));
                     break;
+                    
+            case 4: 
+                    out.println(g.toJson(dpd.estadoEdit2(Integer.parseInt(request.getParameter("id")))));
+                    break;        
+                    
         }
     
     }

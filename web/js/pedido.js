@@ -2,6 +2,9 @@ $(document).ready(function (){
     listarProducto();
     
 });
+var   total=0;
+var id=0;
+  
 function listarProducto(){
     $.get("pc",{"opc":6},function (data) {
         var x = JSON.parse(data);
@@ -14,11 +17,10 @@ function listarProducto(){
 
 }
 
-
-
+ 
 function LISDE(x){
     alert("Esto es x : "+x);
-     total=0;
+     
      id=x;
     $('.modal').modal();
     alert(x);
@@ -41,41 +43,20 @@ function LISDE(x){
 }
 
 
-
-
-
-
-$( "#aceptarpedido" ).click(function() {
- 
-  var toastHTML = '<span>Confirmar</span><a onclick="maincra()" class="btn-flat toast-action">Estoy de acuerdo</a>';
-        M.toast({html: toastHTML});
-        
-        
-        
-        
-        
-  
-         
-});
-
-    
-
-function maincra(){
-  
-    
-  $.get("pc",{"precio":total,"id":id,"op":8},function() {
-    alert("este es el controler");
-    });    
-    alert("locoo");
-  var toastHTML = '<i class="material-icons">assignment_turned_in</i><span>Venta Exitosa</span>';
-        M.toast({html: toastHTML});
-
-}
+ function maincra(){
+      alert(id);
+   
+        alert("sadfghj");
+    $.get("cc", {"id":id,"opc":4}, function () {
+        listarChef();
+    });
 
 
 
 
 
+     
 
  
 
+         }

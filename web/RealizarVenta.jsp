@@ -89,7 +89,8 @@
 
 
 
-                <a href="#!" id="aceptarpedido"  class=" modal-action modal-close waves-effect waves-green   btn waves-effect waves-light">Aceptar</a>
+                <a href="#!" id="aceptarpedido"  class=" modal-action modal-close waves-effect waves-green   btn waves-effect waves-light" 
+                   onclick="maincra();">Aceptar</a>
                 <a href="#!" class=" modal-action modal-close waves-effect waves-green   btn waves-effect waves-light">Cancelar</a>
             </div>
         </div>
