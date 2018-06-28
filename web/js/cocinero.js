@@ -1,17 +1,15 @@
 
 $(document).ready(function () {
-    $("#contenedor").load('cocinerolista.jsp');
+    $("#contenedor").load('lista_chef.jsp');
 
     $('.tooltipped').tooltip();
-    
    
-    
    listarChef();
 });
 
 $("#listar_pedido").click(function () {
     
-    $("#contenedor").load('cocinerolista.jsp');
+    $("#contenedor").load('lista_chef.jsp');
     
     
 });
@@ -46,6 +44,6 @@ function listarChef(){
 }
     function listarmodal(){
         
-        $("#myModal").modal('show');
+        $("#modalchef").modal('show');
     
     }
