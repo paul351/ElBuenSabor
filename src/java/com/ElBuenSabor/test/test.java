@@ -16,8 +16,16 @@ import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
+<<<<<<< HEAD
+<<<<<<< HEAD
+import com.ElBuenSabor.Entity.Historial;
+import com.ElBuenSabor.Entity.Pedido;
+=======
+>>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9
+=======
 import com.ElBuenSabor.Entity.Detalle_Pedido;
 import com.ElBuenSabor.Entity.Pedido;
+>>>>>>> 2ecedca81a69f84614c4be43e9dbd7a3e6048b69
 import com.ElBuenSabor.Entity.Persona;
 import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
@@ -35,6 +43,8 @@ public class test {
     private static UsuarioDao us=new UsuarioDaoImpl();
     private static HistorialDao h=new HistorialDaoImpl();
     private static PedidoDao pd=new PedidoDaoImpl(); 
+    
+    
     private static Gson gs=new Gson();
     
     public static void main(String[] args) {
@@ -48,9 +58,17 @@ public class test {
         //listachef();
         //listaPe();
         //listal();
+<<<<<<< HEAD
+        ki();
+=======
         //friocomosucorazon();
+<<<<<<< HEAD
+        listaid();
+>>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9
+=======
         //listaid();
         edit1();
+>>>>>>> 2ecedca81a69f84614c4be43e9dbd7a3e6048b69
     }
       
     
@@ -123,6 +141,12 @@ public class test {
     private static void friocomosucorazon() {
         System.out.println(gs.toJson(us.COMBO()));
     }
+    
+    private static void ki(){
+        Pedido pe=new Pedido(1);
+        System.out.println(pd.create(pe));
+    
+}
 
     private static void listaid() {
         System.out.println(gs.toJson(dpd.listarModal(1)));

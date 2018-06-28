@@ -21,6 +21,12 @@ public interface PedidoDao {
     public List<Map<String,?>> listarDetalle(int id);
    
     Pedido listarIdPedido(int key);
+<<<<<<< HEAD
+    int create(Pedido p);
+    
+ 
+=======
 
    
+>>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9
 }

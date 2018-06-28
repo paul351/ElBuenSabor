@@ -1,4 +1,4 @@
-$(document).ready(function (){
+$(document). ready(function (){
     listarProducto();
     
 });
@@ -14,7 +14,7 @@ function listarProducto(){
             $("#tablita").append("<tr><td>" +x[i].ID_PEDIDO+ "</td><td>" +x[i].NOMBRE+"</td><td>"+x[i].APELLIDO+"</td><td>"+x[i].DNI+"</td><td>"+x[i].FECHA+"</td><td><button data-target='modal1' class='btn-floating btn-large waves-effect waves-light red modal-trigger' onclick='LISDE(" + x[i].ID_PEDIDO + ")'><i class='material-icons'>remove_red_eye</i></button></td></tr>");
         }
     });
-
+    
 }
 
  
@@ -43,6 +43,7 @@ function LISDE(x){
 }
 
 
+<<<<<<< HEAD
  function maincra(){
       alert(id);
    
@@ -50,6 +51,43 @@ function LISDE(x){
     $.get("cc", {"id":id,"opc":4}, function () {
         listarChef();
     });
+=======
+
+
+
+
+$( "#aceptarpedido" ).click(function() {
+ 
+  var toastHTML = '<span>Confirmar</span><a id="aceptar" class="btn-flat toast-action">Estoy de acuerdo</a>';
+        M.toast({html: toastHTML});
+        
+        
+           
+});
+
+   $( "#aceptar" ).click(function() {
+ 
+  var toastHTML = '<span>Confirmar</span><a id="aceptar" class="btn-flat toast-action">Estoy de acuerdo</a>';
+        M.toast({html: toastHTML});
+        
+        
+           
+});
+ 
+
+function AceptarTotal(){ 
+    
+    alert("locoo");
+    
+       $.post("pc",{"precio":12,"id":1,"op":8},function(data) {
+        alert(data);
+        alert("este es el controler");
+        });   
+  var toastHTML = '<i class="material-icons">assignment_turned_in</i><span>Venta Exitosa</span>';
+        M.toast({html: toastHTML});
+
+}
+>>>>>>> bac3c46cc021755eea7a54095f23506c1f455195
 
 
 

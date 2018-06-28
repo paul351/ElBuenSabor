@@ -28,6 +28,16 @@ public class Pedido {
         this.estado = estado;
     }
 
+    public Pedido(int usuario_id_usuario) {
+        this.usuario_id_usuario = usuario_id_usuario;
+    }
+    
+    
+    public Pedido(int id_pedido, int usuario_id_usuario) {
+        this.id_pedido = id_pedido;
+        this.usuario_id_usuario = usuario_id_usuario;
+    }
+
     public Pedido() {
     }
 

@@ -126,7 +126,38 @@ public class PedidoDaoImpl implements PedidoDao {
         return P; 
     }
 
+<<<<<<< HEAD
+    @Override
+    public int create(Pedido p) {
+            int id=0;
+        try {
+            cx = Conexion.getConexion();
+            cst = cx.prepareCall("{call INSERTARPEDIDO_MESERO(?,?)}");
+            cst.setInt(1, p.getUsuario_id_usuario());
+            cst.registerOutParameter(2, java.sql.Types.INTEGER);
+            cst.executeUpdate();
+            id = cst.getInt(2);
+        } catch (SQLException e) {
+            System.out.println("Error: "+e);
+        }
+        return id;
+    }
+
+
+
+
+    }
+
+    
+  
+    
+  
+    
+    
+
+=======
   
    
 
 }
+>>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9
