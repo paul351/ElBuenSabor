@@ -41,7 +41,8 @@ public class test {
         //CrearUsuario();
         //listarHisotrial();
         //listachef();
-        listaPe();
+        //listaPe();
+        listal();
     }
       
     
@@ -107,4 +108,8 @@ public class test {
         
     }
     
+    private static void listal(){
+        System.out.println(gs.toJson(pd.listarDetalle(1)));
+    }
+
 }
