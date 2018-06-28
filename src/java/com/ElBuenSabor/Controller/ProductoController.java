@@ -1,10 +1,13 @@
 
 package com.ElBuenSabor.Controller;
 
+import com.ElBuenSabor.Dao.HistorialDao;
 import com.ElBuenSabor.Dao.PedidoDao;
 import com.ElBuenSabor.Dao.ProductoDao;
+import com.ElBuenSabor.DaoImp.HistorialDaoImpl;
 import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
+import com.ElBuenSabor.Entity.Historial;
 import com.ElBuenSabor.Entity.Producto;
 import com.google.gson.Gson;
 import java.io.IOException;
@@ -22,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ProductoController", urlPatterns = {"/pc"})
 public class ProductoController extends HttpServlet{
  private ProductoDao pr = new ProductoDaoImpl();
- 
+ private HistorialDao hd=new HistorialDaoImpl();
  private PedidoDao pd=new PedidoDaoImpl();
     private Gson g = new Gson();
  
@@ -57,6 +60,10 @@ public class ProductoController extends HttpServlet{
                     break;
             case 7 :out.println(g.toJson(pd.listarDetalle(Integer.parseInt(request.getParameter("id"))))); 
                     break;        
+            case 8: Historial ht=new Historial(Double.parseDouble(request.getParameter("precio")),Integer.parseInt(request.getParameter("id")));
+                    hd.create(ht);
+                    break;        
+                    
                     
                 
         }
