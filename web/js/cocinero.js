@@ -41,12 +41,10 @@ function listarChef() {
      $("#myModal2").modal('show');*/
 
 }
-function listarmodal() {
 
-    $("#modalchef").modal();
 
-}
-
-$("#tabla").on("click", "#open", function () {
+$("#tabla").on("click", "#open", function (x) {
     $("#modal1").openModal();
+    
+    
 });
