@@ -13,7 +13,6 @@ $("#crear_user").click(function () {
 
 $("#crear_pedi").click(function () {
     $("#contenedor").load('crear_pedido.jsp');
-
     $.get("Usuario", {OPC: 3}, function (DATA) {
         var LOGIN = JSON.parse(DATA);
         console.log(LOGIN);
@@ -32,11 +31,20 @@ $("#crear_pedi").click(function () {
         $("#data").empty();
         $("#data").append(s);
     });
-    //$('#data-table-row-grouping').dataTable();
 });
 
+var reg;
+
 $("#nuevo_crear").click(function () {
-    console.log("uwu");
+    console.log(reg);
+    var neim = "#check" + reg;
+    var allVals = [];
+    for (i = 1; i <= reg; i++) {
+        if ($(neim + ' :checked')) {
+            allVals.push($(neim).attr("name"));
+        }
+    }
+    console.log(allVals);
     $.get("Usuario", {OPC: 3}, function (DATA) {
 //        var LOGIN = JSON.parse(DATA);
 //        console.log(LOGIN);
@@ -63,24 +71,31 @@ function crearhtml() {
 }
 
 $("#contenedor").on("click", "#nuevo", function () {
-//    $.get("Usuario", {OPC: 4}, function (data) {
-//        var alama = JSON.parse(data);
-//        console.log(alama);
-//        $.each(alama, function (index, ala) {
-//            $("#combobox option:last").after(
-//                    "<option value='" + ala.id_producto + "'>" + ala.nombre + "</option>");
-//        });
-////        $('#comboboxito').material_select();
-//    });
-	$.get("Usuario",{OPC: 4},function(data) {
-		var prod = JSON.parse(data);
-		console.log(prod);
-		$.each(prod,function(index, pro) {
-			$("#combobox option:last").after(
-				"<option value='"+pro.id_producto+"'>"+pro.nombre+"</option>");
-		});
-		$('#combobox2').material_select();
-	});
+    $.get("Usuario", {OPC: 4}, function (data) {
+        var prod = JSON.parse(data);
+        var j = '';
+        var num = 1;
+        console.log(prod);
+        $.each(prod, function (index, pro) {
+            j += '<tr>';
+            j += '<td><p><label><input id="check' + num + '" name="' + pro.id_producto + '" type="checkbox" class="filled-in lolo"/><span>' + pro.nombre + '</span></label></p></td>';
+            j += '<td><input id="input' + num + '" name="' + num + '" type="text" class="validate realidad"></td>';
+            j += '</tr>';
+            console.log(num);
+            reg = num;
+            num = num + 1;
+        });
+        $("#data_xd").empty();
+        $("#data_xd").append(j);
+    });
+});
+
+$("#data_xd").on("keyup", ".realidad", function () {
+    var ksi = $(this).attr("name");
+    var siquesi = "#check" + ksi;
+    var can = $(this).val();
+    console.log(siquesi, can);
+    $(siquesi).attr("title", can);
 });
 
 $("#table_contenido").on("click", "#open", function () {

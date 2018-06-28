@@ -142,21 +142,17 @@ public class UsuarioDaoImpl implements UsuarioDao {
 
     @Override
     public List<Producto> COMBO() {
-
         List<Producto> datos = new ArrayList<>();
-        Producto PO = new Producto();
-
         try {
             cx = Conexion.getConexion();
-            ps = cx.prepareCall("SELECT * FROM PRODUCTO");
+            ps = cx.prepareStatement("SELECT * FROM PRODUCTO ORDER BY ID_PRODUCTO ASC");
             rs = ps.executeQuery();
             while (rs.next()) {
-
-                Usuario u = new Usuario();
-                PO.setId_producto(rs.getInt(1));
-                PO.setNombre(rs.getString(2));
-                PO.setPrecio(rs.getDouble(3));
-                datos.add(PO);
+                Producto po = new Producto();
+                po.setId_producto(rs.getInt(1));
+                po.setNombre(rs.getString(2));
+                po.setPrecio(rs.getDouble(3));
+                datos.add(po);
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);

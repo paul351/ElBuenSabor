@@ -104,7 +104,26 @@ public class PedidoDaoImpl implements PedidoDao {
 
 
     }
-    
+
+    @Override
+    public Pedido listarIdPedido(int key) {
+       Pedido P = new Pedido();
+        try {
+            cx = Conexion.getConexion();
+            cst = cx.prepareCall("{call LISTARIDPEDIDO(?)}");
+            cst.setInt(1, key);
+            rs = cst.executeQuery();
+            while(rs.next()){
+               P.setId_pedido(rs.getInt("ID_PEDIDO"));
+               P.setEstado(rs.getInt("ESTADO"));
+            }
+        } catch (SQLException e) {
+            System.out.println("Error:"+ e);
+        }
+        //call searchId(4);
+        return P; 
+    }
+
     
   
     

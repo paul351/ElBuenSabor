@@ -11,5 +11,5 @@ import java.util.List;
 public interface HistorialDao {
     
     List<Historial> readAll();
-    
+    int create(Historial h);
 }

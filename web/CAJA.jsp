@@ -12,7 +12,7 @@
       <div class="navbar-fixed">
           
           <nav class="navbar cyan darken-1">
-          <div class="nav-wrapper"><a href="#!" class="brand-logo grey-text text-darken-4"></a>
+          <div class="nav-wrapper">
             <ul id="nav-mobile" class="right">
                
                   
@@ -45,14 +45,9 @@
                                                                                                        data-position="right" data-tooltip="Realizar Venta"><i class="material-icons left">party_mode</i></a>
              
                   </li>
-               
-           
-          
-        
-               
-               
-             <li class="bold waves-effect " style="width: 100%;"><a class="collapsible-header tooltipped" data-position="bottom" data-tooltip="Cerrar Sesión"><i class="material-icons chevron">chevron_left</i></a>
-              <div class="collapsible-body">
+
+                  <li class="bold waves-effect " style="width: 100%;"><a class="collapsible-header tooltipped" data-position="bottom" data-tooltip="Cerrar Sesión"><i class="material-icons chevron">chevron_left</i></a>
+                  <div class="collapsible-body">
                 
               </div>
              </li>
