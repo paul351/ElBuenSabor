@@ -17,8 +17,9 @@ function listarProducto(){
 
 
 function LISDE(x){
-    total=0;
-    id=x;
+    alert("Esto es x : "+x);
+     total=0;
+     id=x;
     $('.modal').modal();
     alert(x);
     $.get("pc",{"id":x,"opc":7},function (data) {
@@ -48,7 +49,7 @@ $( "#aceptarpedido" ).click(function() {
  
   var toastHTML = '<span>Confirmar</span><a onclick="maincra()" class="btn-flat toast-action">Estoy de acuerdo</a>';
         M.toast({html: toastHTML});
-        M.Toast.dismiss();
+        
         
         
         
@@ -57,13 +58,15 @@ $( "#aceptarpedido" ).click(function() {
          
 });
 
+    
+
 function maincra(){
+  
     
-    alert(total);
-    alert(id);
-    
-    
-    
+  $.get("pc",{"precio":total,"id":id,"op":8},function() {
+    alert("este es el controler");
+    });    
+    alert("locoo");
   var toastHTML = '<i class="material-icons">assignment_turned_in</i><span>Venta Exitosa</span>';
         M.toast({html: toastHTML});
 

@@ -15,6 +15,7 @@ import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
+import com.ElBuenSabor.Entity.Historial;
 import com.ElBuenSabor.Entity.Persona;
 import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
@@ -42,7 +43,9 @@ public class test {
         //listarHisotrial();
         //listachef();
         //listaPe();
-        listal();
+        //listal();
+        ma();
+        
     }
       
     
@@ -110,6 +113,19 @@ public class test {
     
     private static void listal(){
         System.out.println(gs.toJson(pd.listarDetalle(1)));
+    }
+    
+    
+    private static void ma(){
+        Historial ha=new Historial(12.4,1);
+        
+        
+                
+                if (h.create(ha)>0) {
+                    System.out.println("siii");
+                  }else{
+                    System.out.println("nlee");
+                }
     }
 
 }
