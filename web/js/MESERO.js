@@ -39,7 +39,7 @@ $("#nuevo_crear").click(function () {
     var dni = $("#dni_c").val();
     console.log(reg, dni);
     $.get("Usuario", {OPC: 5, DNI:dni}, function (DATA) {
-        console.log(DATA);
+        M.toast({html: 'Pedido realizado correctamente.'})
     });
     for (i = 1; i <= reg; i++) {
         var neim = "#check" + i;
