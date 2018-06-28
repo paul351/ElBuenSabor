@@ -47,5 +47,21 @@ public class HistorialDaoImpl implements HistorialDao{
         return datos;
 
     }
+
+    @Override
+    public int create(Historial h) {
+
+         int x =0;
+        try {
+            cx = Conexion.getConexion();
+            cst = cx.prepareCall("{call INSERTARHISTORIAL(?,?)}");
+            cst.setDouble(1, h.getPrecio());
+            cst.setInt(2, h.getPedido_id_pedido());
+            x = cst.executeUpdate();
+        }catch(SQLException e) {
+            System.out.println("Error:"+e);
+        }
+        return x;
+    }
     
 }

@@ -45,6 +45,10 @@
         </table>
     </div>
 
+        
+        <div id="contenedor">
+            
+        </div>
     <!-- Modal Structure -->
     <div id="modal1" class="modal">
 
@@ -57,6 +61,7 @@
                         <th>Nombre</th>
                         <th>Cantidad</th>
                         <th>Precio</th>
+                        <th>Subtotal</th>
                     </tr>
                 </thead>
 
@@ -64,11 +69,27 @@
                     
                 </tbody>
             </table>
+            
+
+            <div class="row">
+                <div class="input-field col s9">
+                                  
+
+                </div>
+                <div class="input-field col s1">
+                    <label>Total:</label>
+                </div>
+                <div class="input-field col s2">
+                    <input id="total" type="text" class="validate" disabled="true">
+                </div>
+            </div>
+
+            
             <div class="modal-footer">
 
 
 
-                <a href="#!" class=" modal-action modal-close waves-effect waves-green   btn waves-effect waves-light">Aceptar</a>
+                <a href="#!" id="aceptarpedido"  class=" modal-action modal-close waves-effect waves-green   btn waves-effect waves-light">Aceptar</a>
                 <a href="#!" class=" modal-action modal-close waves-effect waves-green   btn waves-effect waves-light">Cancelar</a>
             </div>
         </div>

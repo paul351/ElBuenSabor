@@ -13,19 +13,66 @@ function listarProducto(){
     });
 
 }
+
+
+
 function LISDE(x){
+    total=0;
+    id=x;
     $('.modal').modal();
     alert(x);
     $.get("pc",{"id":x,"opc":7},function (data) {
         var a = JSON.parse(data);
-        alert(a[0].NOMBRE);
-        $("#reyna tbody tr").remove(); 
-        for(var i = 0;i<a.length;i++){
-            $("#reyna").append("<tr><td>" +a[i].NOMBRE+ "</td><td>" +a[i].CANTIDAD+"</td><td>"+a[i].PRECIO+"</td></tr>");
-        }
-    });
+        
+         $("#reyna tbody tr").remove(); 
+         for(var i = 0;i<a.length;i++){
+         $("#reyna").append("<tr><td>" +a[i].NOMBRE+ "</td><td>" +a[i].CANTIDAD+"</td><td>"+a[i].PRECIO+ "</td><td>"+a[i].CANTIDAD*a[i].PRECIO+"</td></tr>");
+         total=total+(a[i].CANTIDAD*a[i].PRECIO);
+         }      
+         $("#total").val(total);   
+         
+             
+         
+    }); 
     
-    
-    
+  
     
 }
+
+
+
+
+
+
+$( "#aceptarpedido" ).click(function() {
+ 
+  var toastHTML = '<span>Confirmar</span><a onclick="maincra()" class="btn-flat toast-action">Estoy de acuerdo</a>';
+        M.toast({html: toastHTML});
+        M.Toast.dismiss();
+        
+        
+        
+        
+  
+         
+});
+
+function maincra(){
+    
+    alert(total);
+    alert(id);
+    
+    
+    
+  var toastHTML = '<i class="material-icons">assignment_turned_in</i><span>Venta Exitosa</span>';
+        M.toast({html: toastHTML});
+
+}
+
+
+
+
+
+
+ 
+
