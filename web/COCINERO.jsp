@@ -34,11 +34,16 @@
                                     <th>Cantidad</th>
                                 </tr>
                             </thead>
+                            <tbody>
+                                
+                            </tbody>
+                            
+                            
                         </table>
                     </div>
                     <input type="hidden" id="idpedido" class="validate">
                 </div>
-                <a id="nuevo_crear" class="modal-close btn waves-effect waves-light">Terminar Pedido
+                <a id="nuevo_crear" onclick="cambiar()" class="modal-close btn waves-effect waves-light">Terminar Pedido
                     <i class="material-icons"></i>
                 </a>
             </div>

@@ -10,16 +10,22 @@ import com.ElBuenSabor.Dao.PedidoDao;
 import com.ElBuenSabor.Dao.PersonaDao;
 import com.ElBuenSabor.Dao.ProductoDao;
 import com.ElBuenSabor.Dao.UsuarioDao;
+import com.ElBuenSabor.DaoImp.DetallePedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.HistorialDaoImpl;
 import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.ElBuenSabor.Entity.Historial;
 import com.ElBuenSabor.Entity.Pedido;
 =======
 >>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9
+=======
+import com.ElBuenSabor.Entity.Detalle_Pedido;
+import com.ElBuenSabor.Entity.Pedido;
+>>>>>>> 2ecedca81a69f84614c4be43e9dbd7a3e6048b69
 import com.ElBuenSabor.Entity.Persona;
 import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
@@ -31,6 +37,7 @@ import com.google.gson.Gson;
  * @author Diego
  */
 public class test {
+    private static  DetallePedidoDaoImpl dpd = new DetallePedidoDaoImpl();
     private static PersonaDao pe=new PersonaDaoImpl();
     private static ProductoDao pr=new ProductoDaoImpl();
     private static UsuarioDao us=new UsuarioDaoImpl();
@@ -39,6 +46,7 @@ public class test {
     
     
     private static Gson gs=new Gson();
+    
     public static void main(String[] args) {
         
         //conex();
@@ -54,8 +62,13 @@ public class test {
         ki();
 =======
         //friocomosucorazon();
+<<<<<<< HEAD
         listaid();
 >>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9
+=======
+        //listaid();
+        edit1();
+>>>>>>> 2ecedca81a69f84614c4be43e9dbd7a3e6048b69
     }
       
     
@@ -136,7 +149,21 @@ public class test {
 }
 
     private static void listaid() {
-        System.out.println(gs.toJson(pd.listarIdPedido(1)));
+        System.out.println(gs.toJson(dpd.listarModal(1)));
+    }
+    
+    
+    private static void edit(){
+        
+   
+        System.out.println(dpd.estadoEdit(2));
+    }
+    
+       
+    private static void edit1(){
+        
+   
+        System.out.println(dpd.estadoEdit2(1));
     }
 
 }
