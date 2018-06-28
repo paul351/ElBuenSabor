@@ -10,11 +10,14 @@ import com.ElBuenSabor.Dao.PedidoDao;
 import com.ElBuenSabor.Dao.PersonaDao;
 import com.ElBuenSabor.Dao.ProductoDao;
 import com.ElBuenSabor.Dao.UsuarioDao;
+import com.ElBuenSabor.DaoImp.DetallePedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.HistorialDaoImpl;
 import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PersonaDaoImpl;
 import com.ElBuenSabor.DaoImp.ProductoDaoImpl;
 import com.ElBuenSabor.DaoImp.UsuarioDaoImpl;
+import com.ElBuenSabor.Entity.Detalle_Pedido;
+import com.ElBuenSabor.Entity.Pedido;
 import com.ElBuenSabor.Entity.Persona;
 import com.ElBuenSabor.Entity.Producto;
 import com.ElBuenSabor.Entity.Usuario;
@@ -26,12 +29,14 @@ import com.google.gson.Gson;
  * @author Diego
  */
 public class test {
+    private static  DetallePedidoDaoImpl dpd = new DetallePedidoDaoImpl();
     private static PersonaDao pe=new PersonaDaoImpl();
     private static ProductoDao pr=new ProductoDaoImpl();
     private static UsuarioDao us=new UsuarioDaoImpl();
     private static HistorialDao h=new HistorialDaoImpl();
     private static PedidoDao pd=new PedidoDaoImpl(); 
     private static Gson gs=new Gson();
+    
     public static void main(String[] args) {
         
         //conex();
@@ -44,7 +49,8 @@ public class test {
         //listaPe();
         //listal();
         //friocomosucorazon();
-        listaid();
+        //listaid();
+        edit1();
     }
       
     
@@ -119,7 +125,21 @@ public class test {
     }
 
     private static void listaid() {
-        System.out.println(gs.toJson(pd.listarIdPedido(1)));
+        System.out.println(gs.toJson(dpd.listarModal(1)));
+    }
+    
+    
+    private static void edit(){
+        
+   
+        System.out.println(dpd.estadoEdit(2));
+    }
+    
+       
+    private static void edit1(){
+        
+   
+        System.out.println(dpd.estadoEdit2(1));
     }
 
 }

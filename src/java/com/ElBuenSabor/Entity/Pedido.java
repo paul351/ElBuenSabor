@@ -31,6 +31,13 @@ public class Pedido {
     public Pedido() {
     }
 
+    public Pedido(int id_pedido) {
+        this.id_pedido = id_pedido;
+    }
+
+    
+   
+
     public int getId_pedido() {
         return id_pedido;
     }

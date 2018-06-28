@@ -5,6 +5,7 @@ import com.ElBuenSabor.Dao.Detalle_PedidoDao;
 import com.ElBuenSabor.Dao.PedidoDao;
 import com.ElBuenSabor.DaoImp.DetallePedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
+import com.ElBuenSabor.Entity.Pedido;
 import com.google.gson.Gson;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -36,6 +37,9 @@ public class CocineroController extends HttpServlet {
                     break;
             case 2: out.println(g.toJson(dpd.listarModal(Integer.parseInt(request.getParameter("id")))));
                 break; 
+            case 3: 
+                    out.println(g.toJson(dpd.estadoEdit(Integer.parseInt(request.getParameter("id")))));
+                    break;
         }
     
     }
