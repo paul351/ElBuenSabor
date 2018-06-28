@@ -54,8 +54,10 @@ public class test {
         //CrearUsuario();
         //listarHisotrial();
         //listachef();
-        listaPe();
+       
+        
         //listal();
+        lista();
 
     }
       
@@ -147,11 +149,12 @@ public class test {
         System.out.println(dpd.estadoEdit(2));
     }
     
-       
-    private static void edit1(){
-        
-   
-        System.out.println(dpd.estadoEdit2(1));
+    
+    private static void lista(){
+        System.out.println(h.readAll());
     }
-
+    
+    
+    
+   
 }
