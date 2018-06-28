@@ -32,7 +32,7 @@
 
                     <li><a href="./carta.jsp" style="font-family: 'Yanone Kaffeesatz', sans-serif;font-size: 25px;">Carta</a></li>
                     <li><a href="badges.html" style="font-family: 'Yanone Kaffeesatz', sans-serif;font-size: 25px;font-weight:black;">Locales</a></li>
-                    <a class="waves-light btn-large cyan pulse" href="login.jsp">Reservar</a>
+                    <a class="waves-light btn-large cyan pulse" href="login.jsp">Iniciar Sesion</a>
                 </ul>
 
             </nav>
@@ -97,7 +97,7 @@
             <div class="left title">
                 <div class="content">
                     <h2>Servicios</h2>
-                    <a href="#" class="btn-primary">:)</a>
+                    <p>El buen sabor es una restaurante peruano que se dedica al servicio de comida , específicamente comida criolla y chifa , actualmente no cuenta con un sistemas de pedidos y es por eso que se decidió implementar uno allí para así poder reducir el tiempo de espera y automatizar ese proceso.</p>
                 </div>
             </div>
             <div class="right tiles">
@@ -133,7 +133,9 @@
                         </div>
                         <div class="col s10">
                             <span class="black-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, expedita a, quas repellat consequatur praesentium quidem enim cupiditate. Voluptas a ipsa praesentium deleniti voluptate ex pariatur alias vero nulla tempora.
+
+                                <p> Mi nombre  es Pablo Alcca Ancoo y soy el administradoy y jefe de la empresa el buen Sabor,tengo reconocimientos en el arte culinario ,tambien estuve presente en Mistura donde ocupe el 12 lugar.
+                                </p>
                             </span>
                         </div>
                     </div>
@@ -155,43 +157,6 @@
                 </div>
             </div>
         </div>
-        <footer class="page-footer" style='margin-top:20px;'>
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Footer Content</h5>
-                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-
-                            <ul>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col share facebook">
-                                            <i class=" col fa fa-facebook" aria-hidden="true"></i>
-                                        </div>
-                                        <div class="col share twitter">
-                                            <i class="col fa fa-twitter" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </ul>
-                            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                            <li><a class="grey-text text-lighten-3" href="#!">Lasdink 4</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2014 Copyright Text
-                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-                </div>
-            </div>
-        </footer>
         <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="js/materialize.min.js" type="text/javascript"></script>
         <script src="js/script.js" type="text/javascript"></script>

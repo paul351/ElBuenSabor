@@ -49,14 +49,14 @@
 
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="./images/chaufa.jpg">
+                                <img class="activator" src="./images/carta1.jpg">
 
-                                <span class="card-title activator white-text text-white grey darken-4" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Buffets</span>
+                                <span class="card-title activator white-text text-white grey darken-4" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Tequeños</span>
 
                             </div>
 
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Locales<i class="material-icons right">close</i></span>
+                                <span class="card-title grey-text text-darken-4">Chaufa Pequeño<i class="material-icons right">close</i></span>
                                 <p>Here is some more information about this product that is only revealed once clicked on.</p>
                                 <p><a href="#">Le interesa saber mas</a></p>
                             </div>
@@ -66,14 +66,14 @@
 
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="./images/chaufa.jpg">
+                                <img class="activator" src="./images/carta2.jpg">
 
                                 <span class="card-title grey darken-4 activator white-text text-white" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Servicios</span>
 
                             </div>
 
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Servicios<i class="material-icons right">close</i></span>
+                                <span class="card-title grey-text text-darken-4">Chaufa Grande<i class="material-icons right">close</i></span>
                                 <p>Here is some more information about this product that is only revealed once clicked on.</p>
                                 <p><a href="#">Le interesa saber mas</a></p>
                             </div>
@@ -86,14 +86,14 @@
 
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="./images/chaufa.jpg">
+                                <img class="activator" src="./images/carta3.jpg">
 
-                                <span class="card-title grey darken-4 activator white-text text-white" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Servicios</span>
+                                <span class="card-title grey darken-4 activator white-text text-white" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Tallarin Saltado</span>
 
                             </div>
 
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Servicios<i class="material-icons right">close</i></span>
+                                <span class="card-title grey-text text-darken-4">Mostrito<i class="material-icons right">close</i></span>
                                 <p>Here is some more information about this product that is only revealed once clicked on.</p>
                                 <p><a href="#">Le interesa saber mas</a></p>
                             </div>
@@ -111,8 +111,8 @@
 
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="./images/chaufa.jpg">
-                                <span class="card-title activator white-text text-white grey darken-4" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Buffets</span>
+                                <img class="activator" src="./images/carta4.jpg">
+                                <span class="card-title activator white-text text-white grey darken-4" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Chaufa Mixto</span>
                             </div>
 
                             <div class="card-reveal transparent">
@@ -146,7 +146,7 @@
 
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
-                                <img class="activator" src="./images/chaufa.jpg">
+                                <img class="activator" src="./images/carta5.jpg">
 
                                 <span class="card-title grey darken-4 activator white-text text-white" style="font-family: 'Fira Sans Extra Condensed', sans-serif;">Servicios</span>
 

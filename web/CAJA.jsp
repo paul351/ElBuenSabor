@@ -46,7 +46,7 @@
              
                   </li>
 
-                  <li class="bold waves-effect " style="width: 100%;"><a class="collapsible-header tooltipped" data-position="bottom" data-tooltip="Cerrar Sesión"><i class="material-icons chevron">chevron_left</i></a>
+                  <li  class="bold waves-effect " style="width: 100%;"><a href="index.jsp" class="collapsible-header tooltipped" data-position="bottom" data-tooltip="Cerrar Sesión"><i class="material-icons chevron">chevron_left</i></a>
                   <div class="collapsible-body">
                 
               </div>
