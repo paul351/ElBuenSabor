@@ -9,7 +9,9 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class DetallePedidoDaoImpl implements Detalle_PedidoDao{
@@ -18,27 +20,32 @@ public class DetallePedidoDaoImpl implements Detalle_PedidoDao{
     private CallableStatement cst;
     private ResultSet rs;
     private Connection cx;
-    
+
     @Override
-    public List<Detalle_Pedido> readAll() {
-        
-    List<Detalle_Pedido> datos = new ArrayList<>();
-        try {
+    public List<Map<String, ?>> listarModal(int id) {
+      
+    List<Map<String, ?>> ret = new ArrayList<>();
+        Map<String,Object> datos = null;
+        try{
             cx = Conexion.getConexion();
-            cst = cx.prepareCall("{call listarRol()}");
+            cst = cx.prepareCall("{call LISTAMODALCHEF(?)}");
+            cst.setInt(1, id);
             rs = cst.executeQuery();
-            while(rs.next()){
-                Detalle_Pedido dp = new Detalle_Pedido();
-                /*dp.setIdr(rs.getInt("idrol"));
-                dp.setNomrol(rs.getString("nom_rol"));*/
-                datos.add(dp);
+            while (rs.next()) {
+                
+                datos = new HashMap<>();
+                
+                datos.put("NOMBRE", rs.getInt(1));
+                
+                datos.put("CANTIDAD", rs.getInt(2));
+                ret.add(datos);
+                
             }
-        } catch (SQLException e) {
-            System.out.println("Error: "+e);
+        }catch (SQLException e) {
+            System.out.println("Error:" + e);
         }
-        return datos;
-    
+        return ret;
     }
-    
+ 
   
 }

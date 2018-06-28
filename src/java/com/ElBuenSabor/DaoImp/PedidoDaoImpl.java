@@ -16,6 +16,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -124,6 +126,7 @@ public class PedidoDaoImpl implements PedidoDao {
         return P; 
     }
 
+<<<<<<< HEAD
     @Override
     public int create(Pedido p) {
             int id=0;
@@ -152,3 +155,9 @@ public class PedidoDaoImpl implements PedidoDao {
     
     
 
+=======
+  
+   
+
+}
+>>>>>>> a61b882c95a8320fee2ca8f10eae857d8881bbe9

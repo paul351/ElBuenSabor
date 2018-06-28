@@ -1,7 +1,9 @@
 
 package com.ElBuenSabor.Controller;
 
+import com.ElBuenSabor.Dao.Detalle_PedidoDao;
 import com.ElBuenSabor.Dao.PedidoDao;
+import com.ElBuenSabor.DaoImp.DetallePedidoDaoImpl;
 import com.ElBuenSabor.DaoImp.PedidoDaoImpl;
 import com.google.gson.Gson;
 import java.io.IOException;
@@ -19,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "CocineroController", urlPatterns = {"/cc"})
 public class CocineroController extends HttpServlet {
-
+    Detalle_PedidoDao dpd = new DetallePedidoDaoImpl();
     private PedidoDao pd  = new PedidoDaoImpl();
     private Gson g = new Gson();
     
@@ -32,8 +34,8 @@ public class CocineroController extends HttpServlet {
         switch(op){
             case 1: out.println(g.toJson(pd.listarChef()));
                     break;
-            case 2: 
-                break;
+            case 2: out.println(g.toJson(dpd.listarModal(Integer.parseInt(request.getParameter("id")))));
+                break; 
         }
     
     }
