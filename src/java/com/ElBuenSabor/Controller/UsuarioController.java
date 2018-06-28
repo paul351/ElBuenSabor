@@ -49,6 +49,14 @@ public class UsuarioController extends HttpServlet {
             case 4:
                 out.println(GSON.toJson(UDAO.COMBO()));
                     break;
+            
+            case 5:
+                out.println(GSON.toJson(UDAO.C_PED(Integer.parseInt(request.getParameter("DNI")))));
+                    break;
+                    
+            case 6:
+                out.println(GSON.toJson(UDAO.C_DET(Integer.parseInt(request.getParameter("PROD")), Integer.parseInt(request.getParameter("CANT")))));
+                    break;
         }
     }
     

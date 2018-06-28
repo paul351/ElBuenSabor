@@ -36,34 +36,22 @@ $("#crear_pedi").click(function () {
 var reg;
 
 $("#nuevo_crear").click(function () {
-    console.log(reg);
-    var neim = "#check" + reg;
-    var allVals = [];
+    var dni = $("#dni_c").val();
+    console.log(reg, dni);
+    $.get("Usuario", {OPC: 5, DNI:dni}, function (DATA) {
+        console.log(DATA);
+    });
     for (i = 1; i <= reg; i++) {
-        if ($(neim + ' :checked')) {
-            allVals.push($(neim).attr("name"));
+        var neim = "#check" + i;
+        if ($(neim).attr("name2") === "1") {
+            var idpo = $(neim).attr("name");
+            var canti = $(neim).attr("title");
+            console.log(idpo, canti);
+        $.get("Usuario", {OPC: 6, PROD:idpo, CANT:canti}, function (DATA) {
+            console.log(DATA);
+        });
         }
     }
-    console.log(allVals);
-    $.get("Usuario", {OPC: 3}, function (DATA) {
-//        var LOGIN = JSON.parse(DATA);
-//        console.log(LOGIN);
-//        var s = '';
-//        var emp = LOGIN[0];
-//        for (var i = 0; i < LOGIN.length; i++) {
-//            s += '<tr>';
-//            s += '<td>' + LOGIN[i].ID_PEDIDO + '</td>';
-//            s += '<td>' + LOGIN[i].DNI + '</td>';
-//            s += '<td><a id="open" class="btn-floating waves-effect waves-light light-blue accent-4 btn modal-trigger" href="#modal2" name="' + LOGIN[i].ID_PEDIDO + '">';
-//            s += '<i class="material-icons right">remove_red_eye</i></a>';
-//            s += '</tr>';
-//        }
-//        $("#table_contenido").empty();
-//        $("#table_contenido").append(createTable());
-//        $("#data").empty();
-//        $("#data").append(s);
-    });
-    //$('#data-table-row-grouping').dataTable();
 });
 
 function crearhtml() {
@@ -78,7 +66,7 @@ $("#contenedor").on("click", "#nuevo", function () {
         console.log(prod);
         $.each(prod, function (index, pro) {
             j += '<tr>';
-            j += '<td><p><label><input id="check' + num + '" name="' + pro.id_producto + '" type="checkbox" class="filled-in lolo"/><span>' + pro.nombre + '</span></label></p></td>';
+            j += '<td><p><label><input id="check' + num + '" name="' + pro.id_producto + '" name2="0" type="checkbox" class="filled-in lolo"/><span>' + pro.nombre + '</span></label></p></td>';
             j += '<td><input id="input' + num + '" name="' + num + '" type="text" class="validate realidad"></td>';
             j += '</tr>';
             console.log(num);
@@ -88,6 +76,14 @@ $("#contenedor").on("click", "#nuevo", function () {
         $("#data_xd").empty();
         $("#data_xd").append(j);
     });
+});
+
+$("#data_xd").on("click", ".lolo", function () {
+    if ($(this).attr("name2") === "0") {
+        $(this).removeAttr("name2").attr("name2", "1");
+    } else if ($(this).attr("name2") === "1") {
+        $(this).removeAttr("name2").attr("name2", "0");
+    }
 });
 
 $("#data_xd").on("keyup", ".realidad", function () {

@@ -22,4 +22,6 @@ public interface UsuarioDao {
     public int CREAR(int DNI, String NOMBRES, String APELLIDOS);
     public List<Map<String,?>> LISTAR();
     List<Producto> COMBO();
+    public int C_PED(int DNI);
+    public int C_DET(int PROD, int CANT);
 }

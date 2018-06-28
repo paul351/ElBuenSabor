@@ -159,4 +159,32 @@ public class UsuarioDaoImpl implements UsuarioDao {
         }
         return datos;
     }
+
+    @Override
+    public int C_PED(int DNI) {
+        int x = 0;
+        try {
+            cx = Conexion.getConexion();
+            ps = cx.prepareCall("INSERT INTO pedido (FECHA, USUARIO_ID_USUARIO, ESTADO) VALUES (NOW(), (SELECT U.ID_USUARIO FROM USUARIO U, persona P WHERE P.USUARIO_ID_USUARIO = U.ID_USUARIO AND  DNI="+DNI+"), 1)");
+            ps.executeUpdate();
+            return 1;
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
+        }
+        return x;
+    }
+    
+    @Override
+    public int C_DET(int PROD, int CANT) {
+        int x = 0;
+        try {
+            cx = Conexion.getConexion();
+            ps = cx.prepareCall("INSERT INTO detalle_pedido (PEDIDO_ID_PEDIDO, PRODUCTO_ID_PRODUCTO, CANTIDAD) VALUES ((select P.ID_PEDIDO from pedido AS P order by ID_PEDIDO DESC limit 1),"+PROD+", "+CANT+")");
+            ps.executeUpdate();
+            return 1;
+        } catch (SQLException e) {
+            System.out.println("Error:" + e);
+        }
+        return x;
+    }
 }

@@ -48,13 +48,13 @@ public class test {
     public static void main(String[] args) {
         
         //conex();
-        //listpe();
+        listpe();
         //listpr();
         //crearpro();
         //CrearUsuario();
         //listarHisotrial();
         //listachef();
-        listaPe();
+        //listaPe();
         //listal();
 
     }
@@ -71,7 +71,7 @@ public class test {
     
     private static void listpe(){
         
-        System.out.println(us.readAll());
+        System.out.println(us.C_DET(1, 4));
     }
     private static void listpr(){
         
