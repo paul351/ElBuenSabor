@@ -1,8 +1,3 @@
-<%-- 
-    Document   : CAJA
-    Created on : 25/06/2018, 01:08:08 AM
-    Author     : Diego
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>

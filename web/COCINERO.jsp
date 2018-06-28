@@ -22,7 +22,6 @@
         <div id="contenedor">
         </div>
         <%@include file="WEB-INF/template/footer.jspf" %>
-        <script src="js/cocinero.js" type="text/javascript"></script>
-              
+        <script src="js/cocinero.js" type="text/javascript"></script>              
     </body>
 </html>
