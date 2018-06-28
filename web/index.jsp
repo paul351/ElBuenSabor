@@ -46,8 +46,8 @@
                     <div class="caption left-align">
 
                         <h1>Promociones para nuestros clientes</h1>
-                        <h5 class="light grey-text text-lighten-3">Lorem ipsum dolor sit amet, consectetur.</h5>
-                        <a class="waves-effect light-blue darken-1 btn-large"><i class="material-icons right">cloud</i>Ver mas</a>
+                        <h5 class="light grey-text text-lighten-3">Muchas promociones por la compra de nuestros platos </h5>
+                        <a class="waves-effect light-blue darken-1 btn-large"><i class="material-icons right">cloud</i>Proximamente</a>
                     </div>
 
 
@@ -68,8 +68,8 @@
                     <img src="./images/slider3.jpg">
                     <!-- random image -->
                     <div class="caption center-align">
-                        <h1>Reserva Fácil y eficaz</h1>
-                        <h5 class="light grey-text text-lighten-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam itaque impedit, autem alias dolores, velit facere rem expedita voluptates ipsum dolore. Dolorem nihil vel consequuntur ducimus iusto nesciunt sint quia!</h5>
+                        <h1>Reconocidos por la marca Peru</h1>
+                        <h5 class="light grey-text text-lighten-3"></h5>
                         <div class="container">
                             <a class="waves-effect light-blue darken-1 btn-large"><i class="material-icons right">cloud</i>Ver mas</a>
                         </div>
@@ -80,7 +80,7 @@
                     <!-- random image -->
                     <div class="caption center-align">
                         <h1>Sistema de atención novedoso</h1>
-                        <h5 class="light grey-text text-lighten-3">Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
+                        <h5 class="light grey-text text-lighten-3">Tratamos a nuestros clientes como nuestros hermanos </h5>
                         <a class="waves-effect light-blue darken-1 btn-large"><i class="material-icons right">cloud</i>Ver mas</a>
                     </div>
                 </li>
@@ -97,8 +97,7 @@
             <div class="left title">
                 <div class="content">
                     <h2>Servicios</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ipsa odit, officia consequuntur libero id velit. Quasi maiores blanditiis inventore provident dicta exercitationem atque, adipisci, aliquid laborum magni libero non!</p>
-                    <a href="#" class="btn-primary">Learn more</a>
+                    <a href="#" class="btn-primary">:)</a>
                 </div>
             </div>
             <div class="right tiles">
